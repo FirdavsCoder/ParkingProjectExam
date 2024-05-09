@@ -5,5 +5,5 @@
   [responsible disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure)
   manner.
 - On IRC, send a private message to any voiced user on our Libera.Chat channel,
-  `#thelounge`.
+  `#ParkingProject`.
 - By email, send us your report at <firdavsyorkulov@gmail.com>.

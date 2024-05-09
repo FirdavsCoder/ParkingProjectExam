@@ -1,6 +1,6 @@
 # Loyihani ishga tushirish bo'yicha yo'riqnoma va buyruqlar
 
-
+<br><br>
 ## File Service
 #### 1. Papkaga kirish 
 ```bash
@@ -22,7 +22,7 @@ npm run migration:run
 ```bash
 npm run start:prod
 ```
-
+<br><br>
 
 # User Service
 #### 1. Papkaga kirish 
@@ -49,7 +49,7 @@ npm run seed:run
 ```bash
 npm run start:prod
 ```
-
+<br><br>
 
 # Park Service
 #### 1. Papkaga kirish 
@@ -76,7 +76,7 @@ npm run seed:run
 ```bash
 npm run start:prod
 ```
-
+<br><br>
 
 # Transaction Service
 #### 1. Papkaga kirish 
@@ -103,7 +103,7 @@ npm run seed:run
 ```bash
 npm run start:prod
 ```
-
+<br><br>
 
 # Api-Gateway Client
 #### 1. Papkaga kirish 
@@ -118,7 +118,7 @@ npm i
 ```bash
 npm run start:prod
 ```
-
+<br><br>
 
 # User Login Infos
 

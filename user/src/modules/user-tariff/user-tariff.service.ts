@@ -13,7 +13,7 @@ export class UserTariffService {
   async findAll(): Promise<ResData<Array<UserTariffEntity>>> {
     const userTariffs = await this.repository.findAll();
 
-    return new ResData('get all user-tariffs', 200, userTariffs);
+    return new ResData('Successfully Found All User Tariffs', 200, userTariffs);
   }
 
   async findOneById(
@@ -25,7 +25,7 @@ export class UserTariffService {
       throw new UserTariffNotFoundRpcException();
     }
 
-    return new ResData('get by id user-tariff', 200, foundData);
+    return new ResData('Successfully Found By Id User Tariff', 200, foundData);
   }
 
   async create(dto: CreateUserTariffDto): Promise<ResData<UserTariffEntity>> {
@@ -35,7 +35,7 @@ export class UserTariffService {
 
     const newUserTariffEntity = await this.repository.insert(newUserTariff);
 
-    return new ResData('success', 200, newUserTariffEntity);
+    return new ResData('Successfully Created', 200, newUserTariffEntity);
   }
 
   async updated(dto: UpdateUserTariffDto): Promise<ResData<UserTariffEntity>> {
@@ -47,7 +47,7 @@ export class UserTariffService {
 
     const updateProduct = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateProduct);
+    return new ResData('Successfully Updated', 201, updateProduct);
   }
 
   async delete(id: number): Promise<ResData<UserTariffEntity | undefined>> {
@@ -59,6 +59,6 @@ export class UserTariffService {
 
     await this.repository.delete(id);
 
-    return new ResData('deleted', 200, foundData);
+    return new ResData('Successfully Deleted', 200, foundData);
   }
 }

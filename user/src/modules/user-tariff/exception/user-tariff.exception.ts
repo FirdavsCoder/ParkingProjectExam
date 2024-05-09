@@ -2,6 +2,6 @@ import { RpcException } from '@nestjs/microservices';
 
 export class UserTariffNotFoundRpcException extends RpcException {
   constructor() {
-    super('userTariff not found');
+    super('User Tariff Not Found');
   }
 }

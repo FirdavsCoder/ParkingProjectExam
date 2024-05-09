@@ -29,4 +29,4 @@ export class CreateTransactionDto {
   amount: number;
 }
 
-// id, shot_credit_id, shot_debit_id, service_id, amount, created_at, last_edited_at ---
+// Path: api-getway/src/modules/shot/dto/create-shot.dto.ts

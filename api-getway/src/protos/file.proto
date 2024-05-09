@@ -63,4 +63,3 @@ message Files {
   repeated File files = 1;
 }
 
-// id, url, mimetype, size, created_at, last_edited_at

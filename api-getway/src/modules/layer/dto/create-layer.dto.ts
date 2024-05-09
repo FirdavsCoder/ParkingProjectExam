@@ -26,4 +26,4 @@ export class CreateLayerDto {
   parkId: number;
 }
 
-// id, name, floor, park_id, created_at, last_edited_at
+// Path: api-getway/src/modules/layer/dto/update-layer.dto.ts

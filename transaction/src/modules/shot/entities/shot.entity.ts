@@ -10,4 +10,3 @@ export class ShotEntity extends BaseEntity {
   amount: number;
 }
 
-// id, user_id, amount, created_at, last_edited_at

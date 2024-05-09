@@ -2,12 +2,12 @@ import { RpcException } from '@nestjs/microservices';
 
 export class UserNotFoundRpcException extends RpcException {
   constructor() {
-    super('user not found_$_400');
+    super('User Not Found');
   }
 }
 
 export class UserNotPhoneRpcException extends RpcException {
   constructor() {
-    super('user not phone_$_404');
+    super('Phone Number not Found');
   }
 }

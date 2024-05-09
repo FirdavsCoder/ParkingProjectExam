@@ -30,7 +30,7 @@ import { config } from 'src/common/config';
           file: Express.Multer.File,
           cb: (err: Error | null, destination: string) => void,
         ) => {
-          const uploadPath = 'uploads';
+          const uploadPath = 'medias';
 
           if (!existsSync(uploadPath)) {
             mkdirSync(uploadPath);

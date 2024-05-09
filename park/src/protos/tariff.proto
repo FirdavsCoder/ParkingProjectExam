@@ -80,4 +80,3 @@ message Tariffs {
   repeated Tariff tariffs = 1;
 }
 
-// id, name, park_id, price, time, created_at, last_edited_at

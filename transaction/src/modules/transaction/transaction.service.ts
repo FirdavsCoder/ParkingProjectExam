@@ -33,7 +33,7 @@ export class TransactionService implements ITransactionService {
 
     const newTransactionEntity = await this.repository.insert(newTransaction);
 
-    return new ResData('success', 200, newTransactionEntity);
+    return new ResData('Successfully Created', 200, newTransactionEntity);
   }
 
   async delete(id: number): Promise<ResData<TransactionEntity>> {
@@ -45,6 +45,6 @@ export class TransactionService implements ITransactionService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

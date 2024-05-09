@@ -47,7 +47,7 @@ export class ParkService implements IParkService {
 
     const newParkEntity = await this.repository.insert(newPark);
 
-    return new ResData('success', 200, newParkEntity);
+    return new ResData('Successfully Created', 200, newParkEntity);
   }
 
   async updated(dto: UpdateParkDto): Promise<ResData<ParkEntity>> {
@@ -59,7 +59,7 @@ export class ParkService implements IParkService {
 
     const updateUser = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateUser);
+    return new ResData('Successfully updated', 201, updateUser);
   }
 
   async delete(id: number): Promise<ResData<ParkEntity>> {
@@ -71,6 +71,6 @@ export class ParkService implements IParkService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

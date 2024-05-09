@@ -87,4 +87,3 @@ message User {
   string lastEditedAt = 7;
 }
 
-// id, phone, password, role, created_at, last_edited_at, park_id

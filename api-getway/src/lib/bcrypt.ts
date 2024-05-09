@@ -1,11 +1,11 @@
-import * as heshla from 'bcrypt';
+import * as hashing from 'bcrypt';
 
 export const hashed = (data: string): Promise<string> => {
   const salt: number = 10;
 
-  return heshla.hash(data, salt);
+  return hashing.hash(data, salt);
 };
 
-export const compar = (data: string, hashData: string): Promise<boolean> => {
-  return heshla.compare(data, hashData);
+export const compare = (data: string, hashData: string): Promise<boolean> => {
+  return hashing.compare(data, hashData);
 };

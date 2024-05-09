@@ -13,7 +13,7 @@ export class FileService implements IFileService {
   async findAll(): Promise<ResData<FileEntity[]>> {
     const Files = await this.repository.findAll();
 
-    return new ResData('get all Files', 200, Files);
+    return new ResData('Successfully Found All Files', 200, Files);
   }
 
   async findOneById(id: number): Promise<ResData<FileEntity>> {
@@ -23,7 +23,7 @@ export class FileService implements IFileService {
       throw new FileNotFoundRpcException();
     }
 
-    return new ResData('get by id File', 200, foundData);
+    return new ResData('Successfully Found By Id File', 200, foundData);
   }
 
   async create(dto: CreateFileDto): Promise<ResData<FileEntity>> {
@@ -33,7 +33,7 @@ export class FileService implements IFileService {
 
     const newFileEntity = await this.repository.insert(newFile);
 
-    return new ResData('success', 200, newFileEntity);
+    return new ResData('Successfully', 200, newFileEntity);
   }
 
   async delete(id: number): Promise<ResData<FileEntity>> {
@@ -45,6 +45,6 @@ export class FileService implements IFileService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

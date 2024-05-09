@@ -17,8 +17,6 @@ import { JwtAuthGuard } from '../shared/guards/jwt-auth.guard';
 import { RolesGuard } from '../shared/role.guard';
 import { RolesDecorator } from 'src/common/decorators/role.Decorator';
 import { RoleEnum } from 'src/common/enums/enum';
-// import { UserService } from '../user/user.service';
-// import { Observable, lastValueFrom } from 'rxjs';
 
 @ApiTags('shot.service')
 @Controller('shot')
@@ -29,12 +27,6 @@ export class ShotController {
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Post()
   async create(@Body() createShotDto: CreateShotDto) {
-    // const responseData: Observable<any> = await this.userService.findOne(
-    //   createShotDto.userId,
-    // );
-
-    // await lastValueFrom(responseData);
-
     return this.shotService.create(createShotDto);
   }
 
@@ -55,12 +47,6 @@ export class ShotController {
     @Param('id', ParseIntPipe) id: number,
     @Body() updateShotDto: UpdateShotDto,
   ) {
-    // const responseData: Observable<any> = await this.userService.findOne(
-    //   updateShotDto.userId,
-    // );
-
-    // await lastValueFrom(responseData);
-
     return this.shotService.update(id, updateShotDto);
   }
 

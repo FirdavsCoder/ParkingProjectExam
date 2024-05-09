@@ -27,10 +27,9 @@ async function bootstrap() {
   );
 
   const options = new DocumentBuilder()
-    .setTitle('Parking Nestjs')
-    .setDescription('this is v1')
+    .setTitle('Parking Project')
+    .setDescription('Parking Project Description Text')
     .setVersion('1.1.1')
-    .addTag('Your API Tag park')
     .addBearerAuth()
     .build();
 

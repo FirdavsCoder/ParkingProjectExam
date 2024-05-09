@@ -33,4 +33,4 @@ export class UserDetailEntity extends BaseEntity {
   userId: number;
 }
 
-// id, firstname, lastname, avatar, user_id, created_at, last_edited_at;
+// Path: user/src/modules/user-detail/interfaces/user-detail.repository.ts

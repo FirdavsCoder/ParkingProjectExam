@@ -13,4 +13,3 @@ export class ParkEntity extends BaseEntity {
   image: number;
 }
 
-// id, name, owner, image, created_at, last_edited_at

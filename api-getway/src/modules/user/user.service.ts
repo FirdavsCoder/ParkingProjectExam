@@ -45,7 +45,7 @@ export class UserService {
 
     await this.cacheManager.del('users');
 
-    return new ResData('create', 201, newUser);
+    return new ResData('Successfully Created', 201, newUser);
   }
 
   async createOwner(createUserDto: CreateUserDto) {
@@ -70,14 +70,14 @@ export class UserService {
 
     await this.cacheManager.del('users');
 
-    return new ResData('create', 201, newUser);
+    return new ResData('Successfully Created', 201, newUser);
   }
 
   async findAll() {
     const allUsers = await this.cacheManager.get('users');
 
     if (allUsers) {
-      return new ResData('get all users redis', 200, allUsers);
+      return new ResData('Successfully Found All Users', 200, allUsers);
     }
 
     const users: Observable<any> = await this.userService.findAll({});
@@ -86,7 +86,7 @@ export class UserService {
 
     await this.cacheManager.set('users', data, 0);
 
-    return new ResData('get all users', 200, data);
+    return new ResData('Successfully Found All Users', 200, data);
   }
 
   findOne(id: number) {
@@ -116,7 +116,7 @@ export class UserService {
 
     await this.cacheManager.del('users');
 
-    return new ResData('update', 201, updateUser);
+    return new ResData('Successfully Update', 201, updateUser);
   }
 
   async remove(id: number) {

@@ -82,4 +82,3 @@ message Parks {
   repeated Park parks = 1;
 }
 
-// id, name, owner, image, created_at, last_edited_at

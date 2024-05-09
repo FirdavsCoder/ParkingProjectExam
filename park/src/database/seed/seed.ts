@@ -68,10 +68,8 @@ import { ServiceEntity } from 'src/modules/service/entities/service.entity';
 
     await queryRunner.commitTransaction();
   } catch (err) {
-    // since we have errors lets rollback the changes we made
     await queryRunner.rollbackTransaction();
   } finally {
-    // you need to release a queryRunner which was manually instantiated
     await queryRunner.release();
   }
 })();

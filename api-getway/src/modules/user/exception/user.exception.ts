@@ -8,6 +8,6 @@ export class UserAlreadyExistsException extends HttpException {
 
 export class OwnerMustHaveParkIdException extends HttpException {
   constructor() {
-    super('owner must have park ID', HttpStatus.BAD_REQUEST);
+    super('Ownerda Park Id bolishi kerak', HttpStatus.BAD_REQUEST);
   }
 }

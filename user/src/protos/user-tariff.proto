@@ -80,4 +80,3 @@ message UserTariffs {
   repeated UserTariff userTariffs = 1;
 }
 
-// id, user_id, tariff_id, started_at, ended_at, created_at, last_edited_at

@@ -100,9 +100,9 @@ export class ServiceController {
         updateServiceDto.tariffId,
       );
 
-      const Tariffprice = await lastValueFrom(resTariff);
+      const TariffPrice = await lastValueFrom(resTariff);
 
-      updateServiceDto.price = Tariffprice.data.price;
+      updateServiceDto.price = TariffPrice.data.price;
     }
 
     return await this.serviceService.update(id, updateServiceDto);

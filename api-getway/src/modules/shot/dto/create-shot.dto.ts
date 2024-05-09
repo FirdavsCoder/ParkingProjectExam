@@ -19,4 +19,4 @@ export class CreateShotDto {
   amount: number;
 }
 
-// id, user_id, amount, created_at, last_edited_at
+// Path: api-getway/src/modules/shot/dto/update-shot.dto.ts

@@ -7,4 +7,3 @@ export class CreateServiceDto {
   tariffId: number;
 }
 
-// id, park_id, user_id, started_at, ended_at, price, tariff_id, created_at, last_edited_at

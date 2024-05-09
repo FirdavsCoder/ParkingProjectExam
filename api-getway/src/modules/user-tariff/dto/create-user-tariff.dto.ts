@@ -35,4 +35,3 @@ export class CreateUserTariffDto {
   endedAt: number;
 }
 
-// id, user_id, tariff_id, started_at, ended_at, created_at, last_edited_at

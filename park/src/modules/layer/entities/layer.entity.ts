@@ -13,4 +13,3 @@ export class LayerEntity extends BaseEntity {
   parkId: number;
 }
 
-// id, name, floor, park_id, created_at, last_edited_at

@@ -14,7 +14,7 @@ export class UserService implements IUserService {
   async findAll(): Promise<ResData<Array<UserEntity>>> {
     const users = await this.repository.findAll();
 
-    return new ResData('get all users', 200, users);
+    return new ResData('Successfully Found All Users', 200, users);
   }
 
   async findOneById(id: number): Promise<ResData<UserEntity | undefined>> {
@@ -24,7 +24,7 @@ export class UserService implements IUserService {
       throw new UserNotFoundRpcException();
     }
 
-    return new ResData('success', 200, foundData);
+    return new ResData('Successfully', 200, foundData);
   }
 
   async findOneByPhone(
@@ -32,7 +32,7 @@ export class UserService implements IUserService {
   ): Promise<ResData<UserEntity | undefined>> {
     const foundData = await this.repository.findOneByPhone(phone);
 
-    const resData = new ResData('success', 200, foundData);
+    const resData = new ResData('Successfully', 200, foundData);
 
     if (!foundData) {
       resData.message = 'Not Found';
@@ -49,7 +49,7 @@ export class UserService implements IUserService {
 
     const newUserEntity = await this.repository.create(newUser);
 
-    return new ResData('success', 200, newUserEntity);
+    return new ResData('Successfully Created', 200, newUserEntity);
   }
 
   async updated(dto: UpdateUserDto): Promise<ResData<UserEntity>> {
@@ -61,7 +61,7 @@ export class UserService implements IUserService {
 
     const updateProduct = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateProduct);
+    return new ResData('Successfully Updated', 201, updateProduct);
   }
 
   async delete(id: number): Promise<ResData<UserEntity | undefined>> {
@@ -73,6 +73,6 @@ export class UserService implements IUserService {
 
     await this.repository.delete(id);
 
-    return new ResData('deleted', 200, foundData);
+    return new ResData('Successfully deleted', 200, foundData);
   }
 }

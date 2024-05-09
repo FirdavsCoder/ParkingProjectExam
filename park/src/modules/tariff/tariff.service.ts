@@ -34,7 +34,7 @@ export class TariffService implements ITariffService {
 
     const newTariffEntity = await this.repository.insert(newTariff);
 
-    return new ResData('success', 200, newTariffEntity);
+    return new ResData('Successfully Created', 200, newTariffEntity);
   }
 
   async updated(dto: UpdateTariffDto): Promise<ResData<TariffEntity>> {
@@ -46,7 +46,7 @@ export class TariffService implements ITariffService {
 
     const updateTariff = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateTariff);
+    return new ResData('Successfully updated', 201, updateTariff);
   }
 
   async delete(id: number): Promise<ResData<TariffEntity>> {
@@ -58,6 +58,6 @@ export class TariffService implements ITariffService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

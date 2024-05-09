@@ -34,7 +34,7 @@ export class LayerService implements ILayerService {
 
     const newLayerEntity = await this.repository.insert(newPark);
 
-    return new ResData('success', 200, newLayerEntity);
+    return new ResData('Successfully', 200, newLayerEntity);
   }
 
   async updated(dto: UpdateLayerDto): Promise<ResData<LayerEntity>> {
@@ -46,7 +46,7 @@ export class LayerService implements ILayerService {
 
     const updateUser = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateUser);
+    return new ResData('Successfully updated', 201, updateUser);
   }
 
   async delete(id: number): Promise<ResData<LayerEntity>> {
@@ -58,6 +58,6 @@ export class LayerService implements ILayerService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

@@ -35,4 +35,4 @@ export class UserEntity extends BaseEntity {
   parkId: number;
 }
 
-// id, phone, password, role, created_at, last_edited_at, park_id
+// Path: user/src/modules/user/dto/update-user.dto.ts

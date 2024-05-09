@@ -47,4 +47,4 @@ export class CreateUserDto {
   parkId: number;
 }
 
-// id, phone, password, role, created_at, last_edited_at, park_id
+// Path: api-getway/src/modules/user/dto/update-user.dto.ts

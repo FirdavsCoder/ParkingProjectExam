@@ -6,8 +6,4 @@ export class TransactionNotFoundRpcException extends RpcException {
   }
 }
 
-// export class TransactionNotFoundRpcException extends RpcException {
-//   constructor() {
-//     super({ message: 'Transaction not found', code: 400 });
-//   }
-// }
+

@@ -14,7 +14,7 @@ export class UserDetailService implements IUserDetailService {
   async findAll(): Promise<ResData<Array<UserDetailEntity>>> {
     const usersDetail = await this.repository.findAll();
 
-    return new ResData('get all users detail', 200, usersDetail);
+    return new ResData('Successfully Found All User Details', 200, usersDetail);
   }
 
   async findOneById(
@@ -26,7 +26,7 @@ export class UserDetailService implements IUserDetailService {
       throw new UserDetailNotFoundRpcException();
     }
 
-    return new ResData('get by id user detail', 200, foundData);
+    return new ResData('Get By Id All User Details', 200, foundData);
   }
 
   async create(dto: CreateUserDetailDto): Promise<ResData<UserDetailEntity>> {
@@ -36,7 +36,7 @@ export class UserDetailService implements IUserDetailService {
 
     const newUserDetailEntity = await this.repository.create(newUserDetail);
 
-    return new ResData('success', 200, newUserDetailEntity);
+    return new ResData('Successfully', 200, newUserDetailEntity);
   }
 
   async updated(dto: UpdateUserDetailDto): Promise<ResData<UserDetailEntity>> {
@@ -48,7 +48,7 @@ export class UserDetailService implements IUserDetailService {
 
     const updateProduct = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateProduct);
+    return new ResData('Successfully Updated', 201, updateProduct);
   }
 
   async delete(id: number): Promise<ResData<UserDetailEntity | undefined>> {
@@ -60,6 +60,6 @@ export class UserDetailService implements IUserDetailService {
 
     await this.repository.delete(id);
 
-    return new ResData('deleted', 200, foundData);
+    return new ResData('Successfully Deleted', 200, foundData);
   }
 }

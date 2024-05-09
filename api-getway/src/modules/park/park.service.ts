@@ -40,7 +40,7 @@ export class ParkService {
     const allParks = await this.cacheManager.get('parks');
 
     if (allParks) {
-      return new ResData('get all parks redis', 200, allParks);
+      return new ResData('Successfully Found All Parks', 200, allParks);
     }
 
     const data: Observable<any> = await this.parkService.FindAll({});
@@ -49,7 +49,7 @@ export class ParkService {
 
     await this.cacheManager.set('parks', allData, 0);
 
-    return new ResData('get all parks', 200, allData);
+    return new ResData('Successfully Found All Parks', 200, allData);
   }
 
   async findOne(id: number) {

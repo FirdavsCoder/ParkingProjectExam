@@ -3,7 +3,7 @@ import { LoginDto } from './dto/create-auth.dto';
 import { ClientGrpc } from '@nestjs/microservices';
 import { USER_PACKAGE } from 'src/common/consts/microservices';
 import { Observable, lastValueFrom } from 'rxjs';
-import { compar } from '../../lib/bcrypt';
+import { compare } from '../../lib/bcrypt';
 import { LoginOrPasswordWrongException } from './dto/exception/auth.exception';
 import { JwtService } from '@nestjs/jwt';
 
@@ -31,7 +31,7 @@ export class AuthService {
       throw new LoginOrPasswordWrongException();
     }
 
-    const checkPassword = await compar(
+    const checkPassword = await compare(
       loginAuthDto.password,
       check.data.password,
     );
@@ -44,6 +44,6 @@ export class AuthService {
 
     const data = { user: check, token: token };
 
-    return { message: 'success', statusCode: 200, data: data };
+    return { message: 'Successfully', statusCode: 200, data: data };
   }
 }

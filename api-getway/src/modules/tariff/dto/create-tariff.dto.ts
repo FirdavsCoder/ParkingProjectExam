@@ -35,4 +35,5 @@ export class CreateTariffDto {
   time: number;
 }
 
-// id, name, park_id, price, time, created_at, last_edited_at
+
+// Path: api-getway/src/modules/shot/dto/update-shot.dto.ts

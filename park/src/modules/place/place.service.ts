@@ -34,7 +34,7 @@ export class PlaceService implements IPlaceService {
 
     const newPlaceEntity = await this.repository.insert(newPlace);
 
-    return new ResData('success', 200, newPlaceEntity);
+    return new ResData('Successfully Created', 200, newPlaceEntity);
   }
 
   async updated(dto: UpdatePlaceDto): Promise<ResData<PlaceEntity>> {
@@ -46,7 +46,7 @@ export class PlaceService implements IPlaceService {
 
     const updatePlace = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updatePlace);
+    return new ResData('Successfully updated', 201, updatePlace);
   }
 
   async delete(id: number): Promise<ResData<PlaceEntity>> {
@@ -58,6 +58,6 @@ export class PlaceService implements IPlaceService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

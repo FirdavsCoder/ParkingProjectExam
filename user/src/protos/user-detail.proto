@@ -80,7 +80,5 @@ message UserDetails {
   repeated UserDetail userDetails = 1;
 }
 
-// id, firstname, lastname, avatar, user_id, created_at, last_edited_at
-
 
 

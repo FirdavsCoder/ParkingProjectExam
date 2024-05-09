@@ -5,4 +5,3 @@ export class CreateTariffDto {
   time: number;
 }
 
-// id, name, park_id, price, time, created_at, last_edited_at

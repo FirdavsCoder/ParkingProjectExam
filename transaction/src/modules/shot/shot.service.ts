@@ -34,7 +34,7 @@ export class ShotService implements IShotService {
 
     const newShotEntity = await this.repository.insert(newShot);
 
-    return new ResData('success', 200, newShotEntity);
+    return new ResData('Successfully Created', 200, newShotEntity);
   }
 
   async updated(dto: UpdateShotDto): Promise<ResData<ShotEntity>> {
@@ -46,7 +46,7 @@ export class ShotService implements IShotService {
 
     const updateUser = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateUser);
+    return new ResData('Successfully updated', 201, updateUser);
   }
 
   async delete(id: number): Promise<ResData<ShotEntity>> {
@@ -58,6 +58,6 @@ export class ShotService implements IShotService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

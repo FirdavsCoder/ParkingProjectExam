@@ -64,21 +64,21 @@ import { RoleEnum } from 'src/common/types/enums';
 
     let detail1 = detailRepository.create({
       firstname: 'John',
-      lastname: 'Smith',
+      lastname: 'Doe',
       userId: 1,
     });
     detail1 = await detailRepository.save(detail1);
 
     let detail2 = detailRepository.create({
-      firstname: 'Ali',
-      lastname: 'Vali',
+      firstname: 'Toshmet',
+      lastname: 'Ahmad',
       userId: 2,
     });
     detail2 = await detailRepository.save(detail2);
 
     let detail3 = detailRepository.create({
-      firstname: 'Oxunjon',
-      lastname: 'Xatamov',
+      firstname: 'Firdavs',
+      lastname: 'Fazliddinov',
       userId: 3,
     });
     detail3 = await detailRepository.save(detail3);

@@ -22,7 +22,7 @@ export class FileService {
 
     const data = await firstValueFrom(files);
 
-    return new ResData('get all files', 200, data);
+    return new ResData('Successfully Found All Files', 200, data);
   }
 
   async findOne(id: ID) {
@@ -34,7 +34,7 @@ export class FileService {
 
     const data = await firstValueFrom(newData);
 
-    return new ResData('created', 201, data);
+    return new ResData('Successfully Created', 201, data);
   }
 
   async delete(id: ID) {
@@ -50,6 +50,6 @@ export class FileService {
 
     await this.fileService.Delete({ id });
 
-    return new ResData('deleted', 204, foundFile.data);
+    return new ResData('Successfully Deleted', 204, foundFile.data);
   }
 }

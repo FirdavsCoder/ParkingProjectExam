@@ -32,4 +32,4 @@ export class UserTariffEntity extends BaseEntity {
   endedAt: Date;
 }
 
-// id, user_id, tariff_id, started_at, ended_at, created_at, last_edited_at
+// Path: user/src/modules/user-detail/interfaces/user-detail.repository.ts

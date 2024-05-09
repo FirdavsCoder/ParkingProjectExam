@@ -4,14 +4,14 @@ import { IsInt, IsNotEmpty, IsOptional, IsString } from 'class-validator';
 export class CreateUserDetailDto {
   @ApiProperty({
     type: String,
-    example: 'Oxunjon',
+    example: 'Firdavs',
   })
   @IsString()
   firstname: string;
 
   @ApiProperty({
     type: String,
-    example: 'Xatamov',
+    example: 'Yorkulov',
   })
   @IsString()
   lastname: string;
@@ -31,4 +31,5 @@ export class CreateUserDetailDto {
   @IsNotEmpty()
   userId: number;
 }
-// id, firstname, lastname, avatar, user_id, created_at, last_edited_at
+
+// Path: api-getway/src/modules/user-detail/dto/update-user-detail.dto.ts

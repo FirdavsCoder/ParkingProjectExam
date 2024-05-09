@@ -34,7 +34,7 @@ export class ServiceService implements IServiceService {
 
     const newServiceEntity = await this.repository.insert(newService);
 
-    return new ResData('success', 200, newServiceEntity);
+    return new ResData('Successfully Created', 200, newServiceEntity);
   }
 
   async updated(dto: UpdateServiceDto): Promise<ResData<ServiceEntity>> {
@@ -46,7 +46,7 @@ export class ServiceService implements IServiceService {
 
     const updateService = await this.repository.update(dto);
 
-    return new ResData('updated', 201, updateService);
+    return new ResData('Successfully updated', 201, updateService);
   }
 
   async delete(id: number): Promise<ResData<ServiceEntity>> {
@@ -58,6 +58,6 @@ export class ServiceService implements IServiceService {
 
     await this.repository.delete(id);
 
-    return new ResData('delete', 200, foundData);
+    return new ResData('Successfully delete', 200, foundData);
   }
 }

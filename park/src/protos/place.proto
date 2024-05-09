@@ -77,5 +77,4 @@ message Places {
   repeated Place places = 1;
 }
 
-// id, name, layer_id, price, created_at, last_edited_at
 

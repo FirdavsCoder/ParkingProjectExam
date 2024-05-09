@@ -13,4 +13,3 @@ export class PlaceEntity extends BaseEntity {
   price: number;
 }
 
-// id, name, layer_id, price, created_at, last_edited_at

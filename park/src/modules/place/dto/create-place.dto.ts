@@ -4,4 +4,3 @@ export class CreatePlaceDto {
   price: number;
 }
 
-// id, name, layer_id, price, created_at, last_edited_at

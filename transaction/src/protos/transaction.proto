@@ -64,4 +64,3 @@ message Transactions {
   repeated Transaction Transactions = 1;
 }
 
-// id, shot_credit_id, shot_debit_id, service_id, amount, created_at, last_edited_at

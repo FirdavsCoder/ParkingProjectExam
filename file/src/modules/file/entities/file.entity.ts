@@ -13,4 +13,3 @@ export class FileEntity extends BaseEntity {
   size: number;
 }
 
-// id, url, mimetype, size, created_at, last_edited_at

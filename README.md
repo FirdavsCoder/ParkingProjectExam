@@ -13,6 +13,15 @@ Elements in beautiful READMEs include, but are not limited to:
   <a href="#user-login-infos">User Login Infos</a>
 </p>
 
+<p align="center">
+	<a href="https://firdavs.uz/"><img
+		alt="#thelounge IRC channel on Libera.Chat"
+		src="https://img.shields.io/badge/Libera.Chat-%23thelounge-415364.svg?colorA=ff9e18"></a>
+	<a href="https://github.com/thelounge/thelounge/actions"><img
+		alt="Build Status"
+		src="https://github.com/thelounge/thelounge/workflows/Build/badge.svg"></a>
+</p>
+
 <br><br>
 ## File Service
 ```bash
